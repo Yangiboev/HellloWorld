@@ -116,7 +116,7 @@ router.post("/:title/new",function(req,res){
 });
 
 router.get("/:title/excel", function(req,res){
-
+  
   if (req.params.title === 'teacher') {
 
     TeacherInfo.find({},function(err,data){
@@ -186,10 +186,8 @@ router.get("/:title/excel", function(req,res){
 });
 router.get("/download/wellDone/:title", function(req, res){
   if(req.params.title === 'teacher'){
-
     const file = `${__dirname}/../Teacher1.xlsx`;
     res.download(file);
-
   }else{
     const file = `${__dirname}/../Student.xlsx`;
     res.download(file);

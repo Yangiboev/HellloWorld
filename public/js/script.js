@@ -56,16 +56,3 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-function myFunction() {
-  var txt;
-  var r = confirm("Press a button!");
-  if (r == true) {
-    txt = "You pressed OK!";
-  } else {
-    txt = "You pressed Cancel!";
-  }
-  // document.getElementById("demo").innerHTML = txt;
-}
-function eventHandler(id){
-  console.log(id);
-}
