@@ -1,0 +1,46 @@
+
+<%- include ("partials/header")%>
+  <div class="container">
+      <button type="button ml-auto" name=""onclick="window.location.href='/teacher/new'" class="btn btn-secondary pull-right ">ADD</button>
+      <button type="button ml-auto" name="button"onclick="window.location.href='/download/wellDone/teacher'" class="btn btn-success pull-right ">EXCEL</button>
+  </div>
+  <div id="container">
+    <table class="list text-center">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Salary</th>
+        <th>English Level</th>
+        <th>Number of Students</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+        <%for (var i = 0; i < teacher.length; i++) {%>
+          <tr>
+          <td><%=teacher[i].name%></td>
+          <td><%=teacher[i].surname%></td>
+          <td>$<%=teacher[i].salary%>/h</td>
+          <td>IELTS <%=teacher[i].level%></td>
+          <td><%=teacher[i].students%></td>
+          <td><a href="/teacher/<%=teacher[i]._id%>"><span class="btn btn-info"><i class="fa fa-eye"></i></span></a></td>
+          <td><a href="/teacher/<%=teacher[i]._id%>/edit"><span class="btn btn-success"><i class="fa fa-pencil"></i></span></a></td>
+          <td><a href="javascript:void(0);" onclick="document.getElementById('id03').style.display='block';document.getElementById('myForm').action='/teacher/<%=teacher[i]._id%>?_method=DELETE';document.getElementById('myForm').method='post'"><span class="btn btn-danger"><i class="fa fa-trash"></i></span></a></td>
+          </tr>
+        <%}%>
+        <div id="id03" class="modal">
+          <span onclick="document.getElementById('id01').style.display='none';" class="close" title="Close Modal">&times;</span>
+          <!-- Modal Content -->
+          <form id="myForm" class="modal-content animate" >
+            <div class="container">
+              <button class="btn btn-success" type="submit">YES</button>
+              <button class="btn btn-danger" type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            </div>
+          </form>
+        </div>
+    </table>
+  </div>
+
+
+
+<%- include ("partials/footer")%>

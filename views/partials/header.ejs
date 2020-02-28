@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Title-->
+    <title>ITSchool</title>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <!-- Font Google Link-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- Font-Awesome-->
+    <link rel="stylesheet" href="/css/fontawesome.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Source css File-->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+  </head>
+  <body data-spy="scroll" data-target="#Navigation" data-offset="65">
+  <!-- PreLoader-->
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+  </div>
+  <!-- Header-->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light  fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <span id="mobile-nav-open-btn">&#9776;</span>
+          <a class="navbar-brand" href="/">ITSchool</a>
+        </div>
+          <div class="container" id="Navigation">
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav ml-auto">
+                <li><a  href="/teachers">Teachers</a></li>
+                <li><a  href="/students">Students</a></li>
+                <%if(!currentUser){%>
+                <li><a  href="javascript:void(0);" onclick="document.getElementById('id01').style.display='block';document.getElementById('id02').style.display='none';">Login</a>  </li>
+                <li><a  href="javascript:void(0);" onclick="document.getElementById('id02').style.display='block';document.getElementById('id01').style.display='none'">SignUp</a></li>
+                <%}else{%>
+                <li><a  href="/">Sign in as <%= currentUser.username %></a></li>
+                <li><a  href="/logout">Log Out</a></li>
+                <%}%>
+              </ul>
+            </div>
+          </div>
+          <div id="mobile-nav">
+            <span id="mobile-nav-close-btn">&times</span>
+            <div id="mobile-nav-content">
+              <ul class="nav">
+                <li><a class="smooth-scroll" href="/teachers">Teachers</a></li>
+                <li><a class="smooth-scroll" href="/students">Students</a></li>
+                <%if(!currentUser){%>
+                <li><a  href="/login">Login</a></li>
+                <li><a  href="/register">SignUp</a></li>
+                <%}else{%>
+                <li><a  href="/">Sign in as <%= currentUser.username %></a></li>
+                <li><a  href="/logout">Log Out</a></li>
+                <%}%>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+<!-- Header Ends-->

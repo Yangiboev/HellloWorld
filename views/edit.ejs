@@ -1,0 +1,54 @@
+<%- include ("partials/header")%>
+
+<div id="login-land">
+  <div class="container">
+    <div id="login">
+      <form action="/teacher/<%=teacher._id%>?_method=PUT" method="POST">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <div class="wt-bannerimages">
+  						<figure class="wt-bannermanimg" data-tilt>
+  							<img src="/img/bannerimg/img-01.png" alt="img description">
+  							<img src="/img/bannerimg/img-02.png" class="wt-bannermanimgone" alt="img description">
+  							<img src="/img/bannerimg/img-03.png" class="wt-bannermanimgtwo" alt="img description">
+  						</figure>
+  					</div>
+          </div>
+          <div class="col-md-6 col-xs-12 login-left">
+            <div class="row">
+              <div class="col-md-12 col-xs-12">
+                <div class="form-group">
+                  <input type="text" class="form-control"  name="teacher[name]" value="<%=teacher.name%>" placeholder="Name">
+                </div>
+              </div>
+              <div class="col-md-12 col-xs-12">
+                <div class="form-group">
+                  <input type="text" class="form-control"  name="teacher[surname]" value="<%=teacher.surname%>"placeholder="Surname">
+                </div>
+              </div>
+              <div class="col-md-12 col-xs-12">
+                <div class="form-group">
+                  <input type="number" class="form-control"  name="teacher[salary]" value="<%=teacher.salary%>"placeholder="Salary">
+                </div>
+              </div>
+              <div class="col-md-12 col-xs-12">
+                <div class="form-group">
+                  <input type="number" class="form-control"  name="teacher[level]" value="<%=teacher.level%>"placeholder="English Level">
+                </div>
+              </div>
+              <div class="col-md-12 col-xs-12">
+                <div class="form-group">
+                  <input type="number" class="form-control"  name="teacher[students]" value="<%=teacher.students%>" placeholder="Number of Students">
+                </div>
+              </div>
+            </div>
+            <button id="btn-login" class="btn btn-general btn-yellow">Edit</button>
+          </div>
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+<%- include ("partials/footer")%>

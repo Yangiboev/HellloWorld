@@ -1,0 +1,155 @@
+
+
+/*======================================
+-----Mobile Menu------
+======================================*/
+.navbar-header{
+  position: relative;
+}
+#mobile-nav-open-btn  {
+
+  font-size: 30px;
+  color: #f4c613;
+  right: 0;
+  top: 6px;
+  float: left;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  display: none;
+}
+#mobile-nav {
+  width: 100%;
+  height: 0%;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 300ms linear;
+  -webkit-transition: all 300ms linear;
+  overflow: hidden;
+  /* display: none; */
+
+}
+#mobile-nav-close-btn {
+  font-family: "Raleway", sans-serif;
+  font-size: 70px;
+  color: #212226;
+  font-weight: 400;
+  cursor: pointer;
+  position: absolute;
+  top: -9px;
+  right: 13px;
+  transition: .3s;
+  -webkit-transition: .3s;
+}
+#mobile-nav-content {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+}
+#mobile-nav ul li {
+  margin-bottom: 20px;
+}
+
+#mobile-nav a {
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  color: #212226;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0 20px 0 0;
+  text-transform: uppercase;
+  display: inline;
+  transition: .3s;
+  -webkit-transition: .3s;
+}
+#mobile-nav a:hover,
+#mobile-nav a:focus,
+#mobile-nav-close-btn:hover,
+#mobile-nav-close-btn:focus {
+  color: #f4c613;
+  background: none;
+}
+.white-nav-top ul.navbar-nav > li.active > a {
+   color: #f4c613;
+   font-weight: 500;
+}
+/*For the Large Screen*/
+@media(min-width: 1200px) and (max-width: 1299px) {}
+/*For the Medium Screen*/
+
+@media (min-width:992px) and (max-width: 1199px) {
+
+}
+
+/*For the small Screen*/
+@media (min-width:768px) and (max-width: 991px) {
+}
+
+/*For the extra small Screen*/
+@media (max-width: 767px) {
+  #mobile-nav-open-btn {
+  display: block;
+  }
+  .navbar {
+    padding: 20px 0;
+  }
+  .white-nav-top {
+    padding: 0;
+  }
+  .btn-general {
+    padding: 12px 46px 12px 46px;
+    font-size: 10px;
+  }
+  .content-box-lg {
+    padding: 90px 0;
+  }
+  .vertical-heading {
+
+    text-align: center;
+  }
+  .vertical-heading h5 {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    display: block;
+    position: static;
+    margin-bottom: 15px;
+  }
+
+  .vertical-heading h2 {
+  font-size: 29px;
+  line-height: normal;
+  margin: 0;
+  }
+
+}
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+
+}
+@media (max-width: 320px) {
+  #testimonial h3 {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  #testimonial .starts {
+  font-size: 10px;
+  }
+}
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+}

@@ -1,0 +1,36 @@
+<%- include ('partials/header')%>
+  <div class="container">
+    <div class="thumbnail">
+      <div class="caption-full">
+        <div class="info">
+          <h4 class="text-right"><%=teacher.salary%>/hour</h4>
+          <h1><%=teacher.name%></h1>
+          <h5>IETLS: <%=teacher.level%></h5>
+        </div>
+        <h1>Students</h1>
+        <table class="list text-center">
+          <tr>
+            <th>Name</th>
+            <th>English Level</th>
+            <th>Duration</th>
+            <th></th>
+            <th></th>
+            <th></th>
+          </tr>
+            <%for (var i = 0; i < student.length; i++) {%>
+              <%if (teacher.name === student[i].Student_Teacher) {%>
+                <tr>
+                  <td><%=student[i].Student_name%></td>
+                  <td>IELTS <%=student[i].Student_level%></td>
+                  <td><%=student[i].Student_duration%> months</td>
+                  <td><a href="/students"><span class="btn btn-info"><i class="fa fa-eye"></i></span></a></td>
+                  <td><span class="btn btn-success"><i class="fa fa-pencil"></i></span></td>
+                  <td><span class="btn btn-danger"><i class="fa fa-trash"></i></span></td>
+                </tr>
+              <%}%>
+            <%}%>
+        </table>
+      </div>
+    </div>
+  </div>
+<%- include ('partials/footer')%>

@@ -1,0 +1,70 @@
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/login" method="post">
+    <div class="imgcontainer">
+      <img src="../img/avatar.png" alt="Avatar" class="avatar">
+    </div>
+    <div class="container">
+      <label for="uname"><b>Username</b></label><br>
+      <input type="text" placeholder="Enter Username" name="username" required><br>
+
+      <label for="psw"><b>Password</b></label><br>
+      <input type="password" placeholder="Enter Password" name="password" required><br>
+
+      <button class="submitbtn" type="submit">Login</button>
+
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button  type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<div id="id02" class="modal">
+<form class="modal-content animate" action="/register" method="POST">
+  <div class="container text-center">
+    <label for="uname"><b>Username</b></label><br>
+    <input type="text" placeholder="Enter Your Last Name" name="username" required><br>
+
+    <label for="name"><b>Name</b></label><br>
+    <input type="text" placeholder="Enter Your First Name" name="name"><br>
+
+    <label for="email"><b>Email</b></label><br>
+    <input type="email" placeholder="Enter Email" name="email" ><br>
+
+    <label for="password"><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Passwrod" name="password"><br>
+
+    <button class="submitbtn" type="submit" name="submit">Sign Up</button><br>
+
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button  name="cancel" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn btn btn-success">Cancel</button>
+  </div>
+</form>
+</div>
+
+    <!--Footer-->
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center col-xs-12">
+              <p>Copyright &copy; 2020 All Rights Reserved <a href="/"><span>ITSchool<span></a></p>
+            </div>
+          </div>
+        </div>
+        <a href="#about" id="back-to-top" class="btn btn-sm btn-yellow btn-back-to-top smooth-scroll " title="home" role="button">
+          <i class="fa fa-angle-up"></i>
+        </a>
+    </footer>
+    <!-- jquery library file-->
+    <script src="/js/jquery.js"></script>
+    <!-- bootstrap javascript file-->
+    <script src="/js/bootstrap.js"></script>
+    <!-- javascript source file-->
+    <script type="text/javascript" src="/js/script.js"></script>
+  </body>
+</html>

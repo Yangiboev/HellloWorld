@@ -1,0 +1,564 @@
+/*======================================
+  Default theme
+  ======================================
+  Fonts: Raleway, Open Sans
+  ======================================
+  colors:
+
+======================================*/
+/*======================================
+-----Ge30neric Css------
+======================================*/
+html, body{
+  height: 100%;
+}
+
+body{
+  margin-top: 100px;
+  color: #212226;
+  overflow-y: scroll;
+  position: relative;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "Raleway", sans-serif;
+}
+
+p{
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+section{
+  background-color: #fff;
+  overflow: hidden;
+}
+
+
+/*======================================
+-----Preloader------
+======================================*/
+#preloader{
+  background-color: #fff;
+  position:fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+}
+#status{
+  background-image: url(../img/preloader/preloader.gif);
+  background-position: center center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -35px;
+  margin-top: -35px;
+}
+/*======================================
+-----Buttons------
+======================================*/
+.btn-general {
+  font-family: "Raleway", sans-serif;
+  border-radius: 28px;
+  font-size: 13px;
+  text-transform: uppercase;
+  margin: 0 6px;
+  padding: 12px 46px 12px 46px;
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+
+.btn-home:hover,
+.btn-home:focus {
+  color: #fff;
+  background-color: #f4c613;
+  border: 1px solid #f4c613;
+}
+.btn-yellow {
+  color: #fff;
+  background-color: #f4c613;
+  border: 1px solid #f4c613;
+}
+
+.btn-yellow:hover,
+.btn-yellow:focus {
+  color: #fff;
+  background-color: #212226;
+  border: 1px solid #212226;
+}
+.btn-white {
+  color: #212226;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-white:hover,
+.btn-white:focus {
+  color: #fff;
+  background-color: #212226;
+  border: 1px solid #212226;
+}
+.btn-back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 3px 15px;
+  border-radius: 4px;
+  font-size: 22px;
+  display: none;
+}
+/*======================================
+-----Navigation------
+======================================*/
+
+.navbar {
+  width: 100%;
+  overflow: auto;
+  background-color: #212226;
+}
+.navbar .navbar-brand {
+  color:#fff;
+}
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+/*======================================
+------Background-----
+======================================*/
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-image {
+  background-image: url("../img/background.jpg");
+  /* Add the blur effect */
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+.bg-text:hover,
+.bg-text:focus{
+ cursor:progress;
+}
+/*======================================
+-----Login------
+======================================*/
+/* Bordered form */
+/* form {
+  border: 3px solid #f1f1f1;
+} */
+
+/* Full-width inputs */
+input[type=text], input[type=password], input[type=email] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  float: center;
+  border-radius: 10px;
+}
+
+/* Set a style for all buttons */
+.submitbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  float: center;
+  border-radius: 10px;
+}
+.buttons {
+
+  margin-right: 15px;
+  width: 100px;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  float: right;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 90px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 40%;
+   /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+/*======================================
+-----Vertical Headings------
+======================================*/
+.vertical-heading h5{
+  color: #f4c613;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  word-spacing: 9px;
+  display: inline-block;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  position: relative;
+  top: 60px;
+  left: -53px;
+}
+.vertical-heading h2 {
+  margin: 0 0 0 35px;
+}
+.vertical-heading h2,
+.horizontal-heading h2 {
+  margin: 0 0 0 35px;
+  font-size: 42px;
+  font-weight: 100;
+  line-height: 45px;
+}
+.horizontal-heading  {
+  margin-bottom: 80px;
+}
+.horizontal-heading h5 {
+font-size: 16px;
+color: #f4c613;
+text-transform: uppercase;
+display: inline-block;
+margin-bottom: 10px;
+}
+.horizontal-heading h2 {
+  margin: 0;
+}
+/*======================================
+-----Team------
+======================================*/
+#team{
+  background-color: #fff;
+}
+
+#team-left .vertical-heading {
+  min-height: 160px;
+}
+
+.team-member {
+  margin: 8px;
+  position: relative;
+}
+
+.team-member-overlay {
+  background-color: rgba(33, 34, 38, .7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 400ms linear;
+  -webkit-transition: all 400ms linear;
+
+}
+
+.team-member-info {
+  width: 100%;
+  height: 100%;
+  padding: 80px 0;
+}
+
+.team-member-info  h6 {
+  color: #f4c613;
+  font-size: 16px;
+  margin: 0;
+}
+
+.team-member-info p{
+  color: #fff;
+}
+.team-member:hover .team-member-overlay {
+  opacity: 1;
+}
+/*======================================
+-----Slider Buttons------
+======================================*/
+.owl-theme .owl-nav [class*= owl-] {
+  color: #212226;
+  font-size: 60px;
+  background: none;
+  margin: 10px;
+}
+.owl-theme .owl-nav [class*= owl-]:hover {
+  background: none;
+  color: #212226;
+}
+/*======================================
+-----Footer------
+======================================*/
+footer {
+  background: #212226;
+  padding: 30px;
+}
+footer p {
+  color: #fff;
+  line-height: 20px;
+}
+
+footer p span {
+  color: #f4c613;
+}
+
+/*======================================
+-----Navigation------
+======================================*/
+
+ul.navbar-nav > li > a {
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 20px 0 0;
+}
+ul.navbar-nav > li > a:hover,
+ul.navbar-nav > li > a:focus {
+  background: none;
+  color: #f4c613;
+}
+.white-nav-top{
+  background: #fff;
+  padding: 0;
+  box-shadow: 0 8px 6px -9px #999;
+  -webkit-box-shadow: 0 8px 6px -9px #999;
+  z-index: 2;
+}
+.white-nav-top ul.navbar-nav > li > a {
+  color: #212226;
+}
+
+.white-nav-top ul.navbar-nav > li > a:hover
+.white-nav-top ul.navbar-nav > li > a:focus {
+   color: #f4c613;
+}
+
+.white-nav-top ul.navbar-nav > li.active > a {
+   color: #f4c613;
+   font-weight: 500;
+}
+/*======================================
+---------Flash------
+======================================*/
+#log-out-error{
+  color: #fff;
+  font-size: 15px;
+}
+#log-out-success{
+  color: #fff;
+  font-size: 15px;
+}
+/*======================================
+---------List------
+======================================*/
+#container{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 80%;
+  margin: 100px auto;
+  background: #f7f7f7;
+}
+table{
+   width: 100%;
+   height: 100%;
+}
+span {
+  cursor:pointer;
+}
+
+th{
+  font-size:18px;
+  background-color:#212226;
+  color: #fff;
+}
+.list {
+  background: #fff;
+  height:40px;
+  line-height: 40px;
+  -webkit-column-rule: #260b13;
+  -moz-column-rule: #260b13;
+  column-rule: #260b13;
+}
+
+tr:nth-child(2n) {
+  background:#f7f7f7;
+}
+
+
+.info {
+  margin-top: 100px;
+  color: #212226;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: relative;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+.info:hover,
+.info:focus{
+ cursor:progress;
+}
+
+.wt-bannerimages{
+	width: 75%;
+  position: relative;
+  left: 25%;
+  transform: translateX(-5%);
+}
+.wt-bannermanimg{
+	margin: 0;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.wt-bannermanimg img{
+	width: 100%;
+	display: block;
+}
+.wt-bannermanimgone,
+.wt-bannermanimgtwo{
+	top: 0;
+	left: 0;
+	content: '';
+	position: absolute;
+	animation-name: floating;
+	-webkit-animation-name: floating;
+	animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	-webkit-animation-timing-function: linear;
+}
+.wt-bannermanimgone{
+		animation-duration: 7s;
+	-webkit-animation-duration: 7s;
+}
+.wt-bannermanimgtwo{
+		animation-duration: 12s;
+	-webkit-animation-duration: 12s;
+}
+.btn-both {
+  style:none;
+}

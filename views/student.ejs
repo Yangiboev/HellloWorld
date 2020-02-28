@@ -1,0 +1,43 @@
+
+<%- include ("partials/header")%>
+  <div class="container btn-both">
+      <button type="button" name="" class="btn btn-secondary pull-right buttons" onclick="window.location.href='/teacher/new'">ADD</button>
+      <button type="button" name="button" class="btn btn-success pull-right buttons"onclick="window.location.href='/download/wellDone/student'">EXCEL</button>
+  </div>
+  <div id="container">
+    <table class="list text-center">
+      <tr>
+        <th>Name</th>
+        <th>Student's Teacher</th>
+        <th>Age</th>
+        <th>English Level</th>
+        <th>Duration</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+        <%for (var i = 0; i < student.length; i++) {%>
+          <tr>
+          <td><%=student[i].name%></td>
+          <td><%=student[i].teachers%></td>
+          <td><%=student[i].age%></td>
+          <td>IELTS <%=student[i].level%></td>
+          <td><%=student[i].month%> months</td>
+          <td><a href="/student/<%=student[i]._id%>"><span class="btn btn-info"><i class="fa fa-eye"></i></span></a></td>
+          <td><a href="/student/<%=student[i]._id%>/edit"><span class="btn btn-success"><i class="fa fa-pencil"></i></span></a></td>
+          <td><a href="javascript:void(0);" onclick="document.getElementById('id03').style.display='block';document.getElementById('myForm').action='/student/<%=student[i]._id%>?_method=DELETE';document.getElementById('myForm').method='post'"><span class="btn btn-danger"><i class="fa fa-trash"></i></span></a></td>
+          </tr>
+          <div id="id03" class="modal text-center">
+            <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <!-- Modal Content -->
+            <form class="modal-content animate" id="myForm" >
+              <div class="container">
+                <button class="btn btn-success pull-right" type="submit">YES</button>
+                <button class="btn btn-danger pull-right" type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+              </div>
+            </form>
+          </div>
+        <%}%>
+    </table>
+  </div>
+<%- include ("partials/footer")%>
